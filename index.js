@@ -25,6 +25,10 @@ app.use(cors());
 
 insurancePolicyRoutes(app);
 
+app.get('*', (req,res) =>{
+  res.send('Insurance policy backend')
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Our application is running on ${PORT}`)
