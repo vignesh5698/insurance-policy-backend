@@ -9,8 +9,7 @@ const app = express();
 
 //  mongo connection
 mongoose.Promise = global.Promise;
-const MONGODB_URI = "mongodb+srv://userAdmin:ABCdef!!!@cluster0.mjmzi.mongodb.net/insurancePolicyDB?retryWrites=true&w=majority"
-// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/userDB';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/userDB';
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -32,6 +31,6 @@ app.get('*', (req,res) =>{
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Our application is running on ${PORT}`)
+  console.log(`Insurance policy application is running on ${PORT}`)
 });
 
