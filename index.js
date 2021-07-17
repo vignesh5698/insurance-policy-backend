@@ -9,7 +9,8 @@ const app = express();
 
 //  mongo connection
 mongoose.Promise = global.Promise;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/userDB';
+const MONGODB_URI = "mongodb+srv://userAdmin:ABCdef!!!@cluster0.mjmzi.mongodb.net/insurancePolicyDB?retryWrites=true&w=majority"
+// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/userDB';
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -26,7 +27,7 @@ app.use(cors());
 insurancePolicyRoutes(app);
 
 app.get('*', (req,res) =>{
-  res.send('Insurance policy backend')
+  res.send('Insurance policy')
 });
 
 const PORT = process.env.PORT || 5000;
