@@ -9,7 +9,7 @@ const app = express();
 
 //  mongo connection
 mongoose.Promise = global.Promise;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/userDB';
+const MONGODB_URI = "mongodb+srv://userAdmin:ABCdef!!!@cluster0.mjmzi.mongodb.net/insurancePolicyDB?retryWrites=true&w=majority"
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
